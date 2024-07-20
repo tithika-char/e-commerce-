@@ -37,7 +37,8 @@ const collectData= async()=>{
 
      result=await result.json()
         console.warn(result);
-        localStorage.setItem("user",JSON.stringify(result)); //user name key,result name data
+        localStorage.setItem("user",JSON.stringify(result.result)); //user name key,result name data
+        localStorage.setItem("token",JSON.stringify(result.auth)); //user name key,result name data
 
             navigate('/')
 
